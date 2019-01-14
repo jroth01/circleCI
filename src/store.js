@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import thunk from 'redux-thunk'
-import createHistory from 'history/createBrowserHistory'
+import createHashHistory from 'history/createBrowserHistory'
 import rootReducer from './modules'
 
-export const history = createHistory({
-  basename: process.env.PUBLIC_URL,
+export const history = createHashHistory({
+  basename: 'https://jroth01.github.io/circleCI/'
 });
 
 const initialState = {}
