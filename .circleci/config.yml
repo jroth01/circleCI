@@ -65,6 +65,7 @@ jobs:
           command: |
               set -e
               remote=$(git config remote.origin.url)
+              echo remote
               if [ ! -d "build" ]
               then
                   echo "build folder not found"
@@ -86,7 +87,7 @@ jobs:
               cp -a "../build/." .
               git add -A
               git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
-              git push --force --quiet "https://${GH_TOKEN}@${remote.origin.url}" gh-pages > /dev/null 2>&1
+              git push --force --quiet "https://${GH_TOKEN}@github.com/${GH_REPO}.git" gh-pages > /dev/null 2>&1
               cd ..
               echo pushed to gh-pages
               rm -rf gh-pages-branch
