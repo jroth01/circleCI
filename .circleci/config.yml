@@ -86,10 +86,13 @@ jobs:
               cp -a "../build/." .
               git add -A
               git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
-              git push --force --quiet origin gh-pages > /dev/null 2>&1
+              git push --force --quiet origin gh-pages
               cd ..
+              echo pushed to gh-pages
               rm -rf gh-pages-branch
+              echo removed gh-pages-branch
               echo "Finished GitHub pages Deployment!"
+              exit 0
   deploy-prod:
     <<: *defaults
     steps:
