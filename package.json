@@ -1,15 +1,12 @@
 {
   "private": true,
-  "homepage": "https://create-react-app-redux.now.sh",
+  "homepage": "https://jroth01.github.io/circleCI/",
   "scripts": {
-    "deploy": "now && now alias",
     "start": "react-scripts start",
-    "now-start": "serve -s ./build",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "lint": "echo lint goes here",
-    "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
     "jest": "^23.6.0",
@@ -28,10 +25,4 @@
     "sanitize.css": "7.0.3",
     "serve": "10.1.1"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
 }
